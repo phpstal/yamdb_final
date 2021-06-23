@@ -11,7 +11,6 @@ from .views import (YamdbUserViewSet,
                     ReviewViewSet,
                     CommentViewSet)
 
-
 router = DefaultRouter()
 router.register('users', YamdbUserViewSet, basename='users')
 router.register('genres', GenreViewSet, basename='genres')

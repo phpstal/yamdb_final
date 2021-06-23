@@ -122,10 +122,9 @@ class Registration(APIView):
     permission_classes = (AllowAny,)
 
     def confirmation_code_generate(self, email):
-        confirmation_code = hashlib.md5(
+        return hashlib.md5(
             f'{email}{settings.SECRET_KEY}'.encode('utf-8')
         ).hexdigest()
-        return confirmation_code
 
     def send_email(self, email, message, token=None):
         if settings.EMAIL_HOST_USER:
