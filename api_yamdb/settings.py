@@ -6,7 +6,7 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-#SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
 SECRET_KEY = 'fu34h9g45gvnpg9nhpg9pn34gnp348gnp3vg34hg'
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
