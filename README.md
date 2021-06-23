@@ -46,3 +46,5 @@
 Скачайте архив по этой [ссылке](https://code.s3.yandex.net/backend-developer/learning-materials/db.sqlite3.zip)
 Скачайте файл, извлеките его из архива и замените им ваш файл db.sqlite3. Вместо вашей БД у вас будет база, заполненная тестовыми постами.
 
+![example branch parameter](https://github.com/phpstal/yamdb_final/actions/workflows/main.yml/badge.svg?branch=feature-1)
+![example event parameter](https://github.com/phpstal/yamdb_final/actions/workflows/main.yml/badge.svg?event=pull_request)
