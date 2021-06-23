@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
-class ROLES_CHOICES(models.TextChoices):
+class RolesChoices(models.TextChoices):
     USER = 'user'
     MODERATOR = 'moderator'
     ADMIN = 'admin'
@@ -21,9 +21,9 @@ class YamdbUser(AbstractUser):
         unique=True,
     )
     role = models.CharField(
-        default=ROLES_CHOICES.USER,
+        default=RolesChoices.USER,
         max_length=100,
-        choices=ROLES_CHOICES.choices,
+        choices=RolesChoices.choices,
         verbose_name='Роль пользователя',
     )
     user_permissions = None
@@ -35,14 +35,14 @@ class YamdbUser(AbstractUser):
     @property
     def is_admin(self):
         return any([
-            self.role == ROLES_CHOICES.ADMIN,
+            self.role == RolesChoices.ADMIN,
             self.is_superuser,
             self.is_staff,
         ])
 
     @property
     def is_moderator(self):
-        return self.role == ROLES_CHOICES.MODERATOR
+        return self.role == RolesChoices.MODERATOR
 
     class Meta:
         verbose_name_plural = 'Пользователи'
