@@ -37,13 +37,13 @@ jobs:
       - name: Login to Docker 
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }} 
+          username: 19870208 
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
+          tags: 19870208/yamdb_final:latest
 #  deploy:
 #    runs-on: ubuntu-latest
 #    needs: build_and_push_to_docker_hub
