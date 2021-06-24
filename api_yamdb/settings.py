@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 
 DATABASES = {
-    'default': os.getenv('DATABASE_URL'),
+    'default': os.environ.setdefault('DATABASE_URL'),
 }
 
 AUTH_USER_MODEL = 'api.YamdbUser'
