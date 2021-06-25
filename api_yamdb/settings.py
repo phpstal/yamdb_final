@@ -69,8 +69,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'yatube',
-        'USER': 'yatube',
-        'PASSWORD': 'xxxyyyzzz',
+        'USER': 'yamdb_user',
+        'PASSWORD': '#1ParolOt@',
         'HOST': '127.0.0.1',
         'PORT': '5432',
         'OPTIONS': {
