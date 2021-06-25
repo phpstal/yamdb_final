@@ -65,8 +65,22 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 
 DATABASES = {
-    'default': os.environ.setdefault('DATABASE_URL', 'yatube_user:xxxyyyzzz@127.0.0.1:5432/yatube'),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'yatube',
+        'USER': 'yatube',
+        'PASSWORD': 'xxxyyyzzz',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require'
+        }
+    }
 }
+
+# DATABASES = {
+#    'default': os.environ.setdefault('DATABASE_URL', 'yatube_user:xxxyyyzzz@127.0.0.1:5432/yatube'),
+#}
 
 AUTH_USER_MODEL = 'api.YamdbUser'
 
