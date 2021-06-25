@@ -75,7 +75,7 @@ jobs:
     needs: deploy
     steps:
     - name: send message
-      uses: {{ secrets.USER }}/{{ secrets.DOCKER_REPOSITORY }}@master
+      uses: ${{ secrets.USER }}/${{ secrets.DOCKER_REPOSITORY }}@master
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
