@@ -65,7 +65,7 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 
 DATABASES = {
-    'default': os.environ.setdefault('DATABASE_URL'),
+    'default': os.environ.setdefault('DATABASE_URL', 'yatube_user:xxxyyyzzz@127.0.0.1:5432/yatube'),
 }
 
 AUTH_USER_MODEL = 'api.YamdbUser'
