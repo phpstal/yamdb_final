@@ -2,6 +2,8 @@
 version: '3.8'
 
 services:
+  yamdb:
+    image: 19870208/yamdb_final
   db:
     image: postgres:12.4
     volumes:
@@ -31,9 +33,7 @@ services:
       - media_value:/var/html/media/
     depends_on:
       - web
-  
-  docker-compose:
-    image: 19870208/yamdb_final:latest
+
 volumes:
   postgres_data:
   static_value:
