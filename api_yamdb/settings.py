@@ -9,13 +9,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'fje*=kp@aexx((ia#)-89ikim)cdx83yo+ea@+)8w(079s*u%@'
 
-# EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')
-# EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS')
-# EMAIL_HOST = os.getenv('EMAIL_HOST')
-# EMAIL_PORT = os.getenv('EMAIL_PORT')
-# EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -66,21 +59,14 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'yatube',
-        'USER': 'yamdb_user',
-        'PASSWORD': '#1ParolOt@',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-        'OPTIONS': {
-            'sslmode': 'require'
-        }
+        'ENGINE': os.environ.get('DB_ENGINE'),
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
-
-# DATABASES = {
-#    'default': os.environ.setdefault('DATABASE_URL', 'yatube_user:xxxyyyzzz@127.0.0.1:5432/yatube'),
-# }
 
 AUTH_USER_MODEL = 'api.YamdbUser'
 
