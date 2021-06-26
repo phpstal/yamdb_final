@@ -61,7 +61,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}  
         stack_file_name: docker-compose.yaml 
         script: | 
-          sudo docker pull 19870208/yamdb_final 
+          sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }} 
           sudo docker-compose stop 
           sudo docker-compose rm web 
           # Создаст файл для переменных окружения 
