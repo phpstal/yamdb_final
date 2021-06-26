@@ -91,7 +91,7 @@ DB_PORT=5432 # порт для подключения к БД
 
 
 ### Автор проекта
-Автор проекта - Владимир. Студент онлайн-школы Яндекс.Практикум. Студент курса Python-разработчик. Еще только учиться.
+Автор проекта - Владимир. Студент онлайн-школы Яндекс.Практикум. Студент курса Python-разработчик. Еще только учится.
 
 ![example branch parameter](https://github.com/phpstal/yamdb_final/actions/workflows/main.yml/badge.svg?branch=feature-1)
 ![example event parameter](https://github.com/phpstal/yamdb_final/actions/workflows/main.yml/badge.svg?event=pull_request)
