@@ -3,9 +3,6 @@ name: Django-app workflow
 on: [push] 
 jobs: 
   tests: 
-    branches:
-      - '*'
-      - '!master'
     runs-on: ubuntu-latest 
     strategy:
       matrix:
